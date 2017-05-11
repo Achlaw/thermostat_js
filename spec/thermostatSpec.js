@@ -11,7 +11,12 @@ describe('Thermostat', function() {
   });
 
   it('can increase temperature', function() {
-    thermostat.increase(30)
-    expect(thermostat.temp).toBe(30);
-  })
+    thermostat.increase()
+    expect(thermostat.temp).toBe(21);
+  });
+
+  it('can decrease temperature', function() {
+    thermostat.decrease()
+    expect(thermostat.temp).toBe(19);
+  });
 });
