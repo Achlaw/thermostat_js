@@ -34,8 +34,13 @@ describe('Thermostat', function() {
   });
 
   it('when saving mode is off has maximum temperature of 32 degrees', function() {
-    thermostat.powerSavingToggle();
+    thermostat.powerSavingToggle()
     expect(thermostat.MAX_TEMP).toBe(32);
+  });
+
+  it('resets the temperature to 20 with a reset function', function() {
+    thermostat.reset()
+    expect(thermostat.temp).toBe(20);
   });
 
 });
