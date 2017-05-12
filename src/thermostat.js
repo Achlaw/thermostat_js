@@ -33,3 +33,15 @@ Thermostat.prototype.powerSavingToggle = function() {
 Thermostat.prototype.reset = function() {
   this.temp = 20;
 };
+
+Thermostat.prototype.currentEnergy = function() {
+  if (this.temp > 25) {
+    return 'high-usage';
+  }
+  else if (this.temp < 25) {
+    return 'low-usage';
+  }
+  else {
+    return 'medium-usage';
+}
+}
