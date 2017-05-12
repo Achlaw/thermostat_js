@@ -6,17 +6,24 @@ function Thermostat() {
 };
 
 Thermostat.prototype.increase = function() {
+  this.maximumTempCheck();
   this.temp = this.temp + 1;
 };
 
 Thermostat.prototype.decrease = function() {
-  this.minimumTemp();
+  this.minimumTempCheck();
   this.temp = this.temp - 1;
 };
 
-Thermostat.prototype.minimumTemp = function() {
+Thermostat.prototype.minimumTempCheck = function() {
   if (this.temp <= this.MIN_TEMP) {
     throw 'Can not go below 10 degrees';
+  }
+};
+
+Thermostat.prototype.maximumTempCheck = function() {
+  if (this.temp >= this.MAX_TEMP) {
+    throw 'Can not go above 25 degrees';
   }
 };
 

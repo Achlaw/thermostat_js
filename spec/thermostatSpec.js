@@ -25,6 +25,11 @@ describe('Thermostat', function() {
     expect( function() { thermostat.decrease() } ).toThrow('Can not go below 10 degrees');
   });
 
+  it('maximum temperature of 25 degrees', function() {
+    thermostat.temp = 25;
+    expect( function() { thermostat.increase() } ).toThrow('Can not go above 25 degrees');
+  });
+
   it('has power saving mode on', function() {
     expect(thermostat.powerSavingOn).toBe(true);
   });
