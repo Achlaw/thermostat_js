@@ -6,6 +6,12 @@ $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=london,uki&appid=70d
   $('#city').text(localtemperature.name);
 });
 
+$("#weather_search").click(function() {
+$.getJSON("http://api.openweathermap.org/data/2.5/weather?q=" + $("#city_search").val() + "&appid=70d50a0639ca16ec7c7790404870e439", function (searchTemp) {
+  $('#local_temperature').text(Math.floor((searchTemp.main.temp) - 273.15) + "°C");
+  $('#city').text(searchTemp.name);
+  });
+});
 
 $("#Temperature_display").text(thermostat.temp + "°C");
 
