@@ -49,7 +49,7 @@ describe('Thermostat', function() {
   });
 
   it('returns medium if temperature is 25', function(){
-    thermostat.temp = 25;
+    thermostat.temp = 24;
     expect(thermostat.currentEnergy()).toBe('medium-usage');
   });
 
