@@ -1,4 +1,16 @@
 
+#low-usage {
+  background-image: url("http://www.freeimageslive.com/galleries/nature/weather/preview/ice_storm%20morning_228600.jpg");
+}
+
+#medium-usage {
+  background-image: url("http://www.freeimageslive.com/galleries/nature/weather/preview/rainbow_qheensland_5232088.jpg");
+}
+
+#high-usage {
+  background-image: url("https://cdn.pixabay.com/photo/2017/04/28/16/05/forest-fire-2268725_1280.jpg");
+}
+
 button[type=button]:hover {
     background-color: #45a049;
 }

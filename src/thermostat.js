@@ -29,7 +29,11 @@ Thermostat.prototype.maximumTempCheck = function() {
 
 Thermostat.prototype.powerSavingToggle = function() {
   this.powerSavingOn = !this.powerSavingOn;
-  if (this.powerSavingOn === true) {
+  if (this.powerSavingOn === true && this.temp > 25) {
+    this.MAX_TEMP = 25;
+    this.temp = 25;
+  }
+  else if (this.powerSavingOn === true) {
       this.MAX_TEMP = 25;
   }
   else {

@@ -9,18 +9,27 @@
 
 </head>
 
-<body>
+<body id="medium-usage" class="body">
+
+<h1>Current Weather <span id="city">None</span>
+  <span id="local_temperature"></span>
+
 <h1>Current Temperature</h1>
+
 <span id="Temperature_display"></span><br>
+<span id="Energy_display"></span><br>
   <button id="Increase">Increase</button>
   <button id="Decrease">Decrease</button><br>
   <button id="Reset">Reset</button><br>
 
 
   <label class="switch">
-    <input type="checkbox" checked>
+    <input id="Slider" type="checkbox" checked>
     <div class="slider round"></div>
   </label>
+
+  <input type="text" class="city_search">
+  <button class="weather_search">Find local weather</button>
 
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
   <script src="src/thermostat.js"></script>
